@@ -18,7 +18,7 @@
 }
 
 .hero-overlay {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
 }
 
 .btn-hover {
@@ -31,5 +31,29 @@
 }
 
 /* Hide scrollbar for gallery tabs */
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.font-soft-hand {
+    font-family: 'Parisienne', cursive !important;
+}
+
+
+
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
+.testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}

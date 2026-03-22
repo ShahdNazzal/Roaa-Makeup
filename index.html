@@ -8,9 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Tajawal:wght@400;700&display=swap"
         rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Amiri&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -58,19 +61,43 @@
                 Roaa <span class="text-brand-text font-light">Makeup</span>
             </div>
 
+
+
+
+
+
+
+
+
+
+
+            <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
             <!-- Desktop Nav -->
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                <a href="#home" class="hover:text-brand-pink-dark transition-colors">Home</a>
-                <a href="#about" class="hover:text-brand-pink-dark transition-colors">About</a>
-                <a href="#gallery" class="hover:text-brand-pink-dark transition-colors">Gallery</a>
-                <a href="#services" class="hover:text-brand-pink-dark transition-colors">Services</a>
-                <a href="#testimonials" class="hover:text-brand-pink-dark transition-colors">Reviews</a>
-                <a href="#contact" class="hover:text-brand-pink-dark transition-colors">Contact</a>
+
+            <div class="hidden md:flex text-xl font-medium uppercase tracking-normal space-x-10"
+                style="font-family: 'Cairo', sans-serif;">
+                <a href="#home"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">الرئيسية</a>
+                <a href="#about"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">عن</a>
+                <a href="#gallery"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">العرض</a>
+                <a href="#services"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">الخدمات</a>
+                <a href="#testimonials"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">الآراء</a>
+                <a href="#contact"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">اتصل
+                    بنا</a>
+
+
+
             </div>
 
             <a href="#booking"
                 class="hidden md:block bg-brand-pink-dark text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest btn-hover">
-                Book Session
+                Book Session <br>إحجزي لجلستك
             </a>
 
             <!-- Mobile Toggle -->
@@ -85,19 +112,20 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu"
             class="hidden md:hidden bg-white w-full absolute top-full left-0 border-b border-brand-pink py-6 px-6 flex flex-col space-y-4 shadow-xl">
-            <a href="#home" onclick="toggleMenu()" class="text-lg">Home</a>
-            <a href="#about" onclick="toggleMenu()" class="text-lg">About</a>
-            <a href="#gallery" onclick="toggleMenu()" class="text-lg">Gallery</a>
-            <a href="#services" onclick="toggleMenu()" class="text-lg">Services</a>
-            <a href="#booking" onclick="toggleMenu()" class="text-lg">Book Now</a>
-            <a href="#contact" onclick="toggleMenu()" class="text-lg">Contact</a>
+            <a href="#home" onclick="toggleMenu()" class="text-lg">Home <br>الرئيسية</a>
+            <a href="#about" onclick="toggleMenu()" class="text-lg">About <br>عن</a>
+            <a href="#gallery" onclick="toggleMenu()" class="text-lg">Gallery <br>العرض</a>
+            <a href="#services" onclick="toggleMenu()" class="text-lg">Services <br>الخدمات</a>
+            <a href="#booking" onclick="toggleMenu()" class="text-lg">Book Now <br>حجز جلسة</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-lg">Contact <br>اتصل بنا</a>
         </div>
+
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0 scale-105">
-            <img src='https://opal.google/board/blobs/74d1bd08-b47a-4cff-96f6-a152245287f4'
+            <img src='https://i.pinimg.com/webp/1200x/93/1f/73/931f73b55e6c03d956dd061401df028c.webp'
                 alt='Luxury Makeup Artist Header' class="w-full h-full object-cover" />
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
@@ -112,11 +140,12 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#booking"
                     class="bg-brand-pink-dark text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest btn-hover shadow-2xl">
-                    Book Your Session
+                    Book Your Session <br>
+                    إحجزي لجلستك
                 </a>
                 <a href="#gallery"
                     class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-brand-pink-dark transition-all">
-                    View My Work
+                    View My Work <br> شغلي
                 </a>
             </div>
         </div>
@@ -141,14 +170,15 @@
 
 
 
-                    <img src='https://instagram.fadj1-1.fna.fbcdn.net/v/t51.82787-15/604437255_17917835484235850_984088638885623654_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ig_cache_key=Mzc5MzIwNTc4NzgwNDY2Mzc5MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=IeClsCMuSn8Q7kNvwE0njic&_nc_oc=AdmDQqOAonlpAn-FcLcEv-Mn1S6kqxOxJc03JZzRPcB0IGLXsFva20XF_TdWCMOHFvY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fadj1-1.fna&_nc_gid=o7ZrEGiZdMt0KShkug7mDQ&_nc_ss=8&oh=00_Afxq7OKC81jrjf5n7aFaLmMVZY7mn-lFhiYcClPcOS_cSw&oe=69BB9020'
-                        alt='Roaa Portrait' class="relative rounded-2xl shadow-2xl w-full h-auto object-cover z-10" />
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\roaa.jpg' alt='Roaa Portrait'
+                        class="relative rounded-2xl shadow-2xl w-full h-auto object-cover z-10" />
                 </div>
             </div>
             <div class="reveal translate-y-10 order-1 md:order-2">
                 <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Meet the
                     Artist</span>
                 <h2 class="text-4xl md:text-5xl font-display mb-8 text-brand-text leading-tight">Biography</h2>
+                <!--
                 <div class="space-y-6 text-brand-muted leading-relaxed text-lg font-light">
                     <p>Roaa is a visionary makeup artist dedicated to the art of luxury beauty and sophisticated
                         transformations. With an unwavering eye for detail and a passion for enhancing natural features,
@@ -159,49 +189,274 @@
                         are exquisite, ensuring every client walks away feeling like the most radiant version of
                         themselves.</p>
                 </div>
+            -->
+                <div class="space-y-6 text-brand-muted leading-relaxed text-lg font-light">
+
+                    <div dir="rtl" style="text-align: right;">
+                        <p>أنا رؤى، فنانة مكياج متخصصة في تحويل لحظاتك الخاصة إلى ذكريات خالدة. شغفي يكمن في إبراز جمالك
+                            الطبيعي وتعزيز ثقتك بنفسك من خلال لمسات فنية تجمع بين الاحترافية والرقي.</p>
+                        <br>
+                        <p>منذ أكثر من 10 سنوات، أعمل مع عرائس وسيدات يسعين للتميز في مناسباتهن، سواء كانت حفلات زفاف،
+                            خطوبة، أو سهرات خاصة. أؤمن بأن كل امرأة تستحق أن تشعر بأنها الأجمل في يومها، وهذا ما أسعى
+                            لتحقيقه في كل جلسة.</p>
+                        <br>
+
+                        <p>
+                            تحمل رؤى شهادات احترافية في فن المكياج، من بينها
+                            <a href="https://www.vtct.org.uk/qualifications/beauty-therapy-and-makeup-artistry/"
+                                target="_blank"
+                                style="color: #E91E63; text-decoration: underline; font-weight: bold; transition: color 0.3s;">
+                                <strong>VTCT Level 3 Diploma in Makeup</strong>
+                            </a>،
+                            وهي شهادة مهنية معتمدة في مجال التجميل تُؤهّل المتدربين للعمل كمحترفي مكياج
+                            في صالونات التجميل وقطاع الأزياء والتصوير والإعلام.
+                        </p>
+                        <br>
+
+                        <p>أستخدم أفضل المنتجات العالمية وأحدث التقنيات لضمان إطلالة تدوم طويلاً وتبدو مثالية في الصور
+                            والفيديو. سواء كنتِ تبحثين عن مكياج ناعم وهادئ أو إطلالة جريئة وملفتة، فأنا هنا لأحقق رؤيتكِ
+                            بأسلوب يجمع بين الفخامة والعصرية.</p>
+                        <br>
+                        <p>دعيني أكون جزءاً من يومك المميز وأساعدك على التألق بأبهى حلة. لأن جمالك يستحق الأفضل.</p>
+                        <br>
+
+                        <p>
+                            بالإضافة لذلك، تحمل رؤى
+                            <a href="https://www.accreditedtraining.org.uk/" target="_blank"
+                                style="color: #E91E63; text-decoration: underline; font-weight: bold; transition: color 0.3s;">
+                                <strong>شهادة تدريبية معتمدة</strong>
+                            </a>
+                            تؤهلها لتدريب المهتمين بعالم المكياج بشكل عملي وفعّال. قريباً، ستعلن عن <strong>كورس تدريبي
+                                متكامل</strong> يتيح للمتدربين التعلم مباشرة معها واكتساب خبرة عملية تساعدهم على تطوير
+                            مهاراتهم والوصول لمستوى احترافي.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
                 <div class="mt-10 flex space-x-8">
                     <div>
-                        <span class="block text-3xl font-display text-brand-pink-dark">10+</span>
-                        <span class="text-xs uppercase tracking-widest text-brand-muted">Years Experience</span>
+                        <span class="block text-3xl font-display text-brand-pink-dark">6+</span>
+                        <span class="text-xs uppercase tracking-widest text-brand-muted">Years Experience <br> سنوات
+                            الخبرة</span>
                     </div>
                     <div>
-                        <span class="block text-3xl font-display text-brand-pink-dark">500+</span>
-                        <span class="text-xs uppercase tracking-widest text-brand-muted">Happy Brides</span>
+                        <span class="block text-3xl font-display text-brand-pink-dark">50+</span>
+                        <span class="text-xs uppercase tracking-widest text-brand-muted">Happy Brides <br> عروس
+                            سعيدة</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Gallery Section -->
+
+    <!--
+    <section id="gallery" class="bg-gray-50 py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal translate-y-10">
+                <h2 class="text-4xl md:text-5xl font-display mb-6">Makeup Gallery <br> الإطلالات</h2>
+                <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Portfolio
+                </span>
+                <div class="flex flex-wrap justify-center gap-2 mt-8 no-scrollbar overflow-x-auto">
+                    <button onclick="filterGallery('all')"
+                        class="gallery-tab active px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider bg-brand-pink-dark text-white font-bold transition-all">جميع
+                        الإطلالات</button>
+                    <button onclick="filterGallery('bridal')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">عروس</button>
+                    <button onclick="filterGallery('glam')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        ناعم</button>
+                    <button onclick="filterGallery('evening')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        سهرة</button>
+                    <button onclick="filterGallery('other')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        خطوبة</button>
+
+                    <button onclick="filterGallery('graduation')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        تخرج
+                    </button>
+
+
+                    <button onclick="filterGallery('henna')"
+                        class="gallery-tab w-full mt-2 px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        حناء
+                    </button>
+
+                </div>
+            </div>
+
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+            -->
+
+
+    <style>
+        /* نخفي الـ radio buttons */
+        .gallery-radio {
+            display: none;
+        }
+
+        /* شكل الأزرار العادية */
+        .gallery-tab {
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* تظليل الزر المحدد بشكل دائم بعد الضغط */
+        .gallery-radio {
+            display: none;
+        }
+
+        .gallery-tab {
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #fff;
+            color: #333;
+        }
+
+
+
+        .gallery-tab.active {
+            background-color: #d63384;
+            color: #fff;
+            border-color: #d63384;
+        }
+    </style>
+
+
+
+
+
+
     <section id="gallery" class="bg-gray-50 py-24 px-6 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal translate-y-10">
                 <span
                     class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Portfolio</span>
-                <h2 class="text-4xl md:text-5xl font-display mb-6">Makeup Gallery</h2>
+                <h2 class="text-4xl md:text-5xl font-display mb-6">Makeup Gallery <br> الإطلالات</h2>
 
-                <div class="flex flex-wrap justify-center gap-2 mt-8 no-scrollbar overflow-x-auto">
-                    <button onclick="filterGallery('all')"
-                        class="gallery-tab active px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider bg-brand-pink-dark text-white font-bold transition-all">All
-                        Looks</button>
+                <!-- 🔹 تصنيفات المكياج -->
+
+                <h3
+                    class="text-sm font-bold text-pink-600 py-1 my-1 text-center w-full uppercase tracking-wide bg-pink-50 rounded-md">
+                    المكياج
+                </h3>
+                <div class="flex flex-wrap justify-center gap-2 mt-1 no-scrollbar overflow-x-auto">
+
+
+
+
+                    <button onclick="filterGallery('makeup-all')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">جميع
+                        الإطلالات</button>
+
+
+
+
+
                     <button onclick="filterGallery('bridal')"
-                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">Bridal</button>
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">عروس</button>
                     <button onclick="filterGallery('glam')"
-                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">Soft
-                        Glam</button>
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">ناعم</button>
                     <button onclick="filterGallery('evening')"
-                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">Evening</button>
-                    <button onclick="filterGallery('other')"
-                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">Engagement</button>
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">سهرة</button>
+                    <button onclick="filterGallery('engagement')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">خطوبة</button>
+                    <button onclick="filterGallery('graduation')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">تخرج</button>
                 </div>
+
+
+
+                <!-- 🔹 تصنيفات الحناء -->
+
+
+
+                <h3
+                    class="text-sm font-bold text-pink-600 py-1 my-1 text-center w-full uppercase tracking-wide bg-pink-50 rounded-md">
+                    الحنّاء
+                </h3>
+                <p>
+                    </pp>
+                <div class="flex flex-wrap justify-center gap-2 mt-1 no-scrollbar overflow-x-auto">
+
+
+                    <button onclick="filterGallery('henna-all')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">جميع
+                        الإطلالات</button>
+
+                    <button onclick="filterGallery('henna-small')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">صغيرة</button>
+                    <button onclick="filterGallery('henna-med')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">وسط</button>
+                    <button onclick="filterGallery('henna-large')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">كبيرة</button>
+
+                </div>
+
+
+
+                <!-- 🔹 تصنيفات الشعر -->
+                <h3
+                    class="text-sm font-bold text-pink-600 py-1 my-1 text-center w-full uppercase tracking-wide bg-pink-50 rounded-md">
+                    الشعر
+                </h3>
+                <div class="flex flex-wrap justify-center gap-2 mt-1 no-scrollbar overflow-x-auto">
+
+
+                    <button onclick="filterGallery('hair-all')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">جميع
+                        الإطلالات</button>
+
+                    <button onclick="filterGallery('hair-bridal')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">عروس</button>
+                    <button onclick="filterGallery('hair-down')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">منسدل</button>
+                    <button onclick="filterGallery('hair-up')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">مرفوع</button>
+                    <button onclick="filterGallery('hair-braids')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">ضفائر</button>
+
+
+                    <button onclick="filterGallery('hair-cuts')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">قصات
+                        الشعر</button>
+                </div>
+
             </div>
 
             <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+
+
+
+
+
                 <!-- Items are data-tagged for simple logic -->
                 <div
-                    class="gallery-item bridal reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[4/5] shadow-lg">
-                    <img src='https://opal.google/board/blobs/729eb7fc-e6ca-45cf-a3e5-4795ccb06625' alt='Bridal Look'
+                    class="gallery-item graduation makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\تخرج1.jpg' alt='Bridal Look'
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
@@ -210,9 +465,8 @@
                     </div>
                 </div>
                 <div
-                    class="gallery-item other reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[4/5] shadow-lg">
-                    <img src='https://opal.google/board/blobs/1d644f74-7525-4139-a6dd-600d53009b7e'
-                        alt='Engagement Look'
+                    class="gallery-item graduation makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\تخرج2.jpg' alt='Engagement Look'
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
@@ -221,8 +475,8 @@
                     </div>
                 </div>
                 <div
-                    class="gallery-item glam reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[4/5] shadow-lg">
-                    <img src='https://opal.google/board/blobs/e3580cda-434a-4ab0-b172-3a4020b78332' alt='Soft Glam Look'
+                    class="gallery-item graduation makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\تخرج3.jpg' alt='Soft Glam Look'
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
@@ -231,8 +485,8 @@
                     </div>
                 </div>
                 <div
-                    class="gallery-item evening reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[4/5] shadow-lg">
-                    <img src='https://opal.google/board/blobs/f12eb543-29e7-431f-9aba-d690705400d2' alt='Evening Look'
+                    class="gallery-item graduation makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\تخرج4.jpg' alt='Evening Look'
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
@@ -240,10 +494,11 @@
                         <h4 class="text-white text-xl font-display italic">Sophisticated Edge</h4>
                     </div>
                 </div>
+
+
                 <div
-                    class="gallery-item other reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[4/5] shadow-lg">
-                    <img src='https://opal.google/board/blobs/dca6df1b-8633-45a6-abfe-984e142c76fe'
-                        alt='Graduation Look'
+                    class="gallery-item engagement makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\خطبة1.jpg' alt='Graduation Look'
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
@@ -251,30 +506,823 @@
                         <h4 class="text-white text-xl font-display italic">Youthful Precision</h4>
                     </div>
                 </div>
+
                 <div
-                    class="gallery-item bridal reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[4/5] shadow-lg">
-                    <img src='https://opal.google/board/blobs/0a075d6f-17d2-438c-bf1a-b92622e20b18'
-                        alt='Bridesmaid Look'
+                    class="gallery-item engagement makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\خطبة2.jpg' alt='Bridesmaid Look'
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                         <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
                         <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
                     </div>
+
+
+
+                </div>
+
+
+                <div
+                    class="gallery-item engagement makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\خطبة3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\ظفائر1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\ظفائر2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\ظفائر3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\ظفائر4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\ظفائر5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+                    <!--قصات شعر-->
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\قصات_شعر1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\قصات_شعر2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\قصات_شعر3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\قصات_شعر4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\قصات_شعر5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\مرفوع1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\مرفوع2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\مرفوع3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\مرفوع4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\مرفوع5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\شعرعروس1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\شعرعروس2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\شعرعروس3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\شعرعروس4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\شعرعروس5وشعرخطبة2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\شعرعروس6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\ظفائر6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\قصات_شعر6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\مرفوع6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\منسدل1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\منسدل2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\منسدل3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\منسدل4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\منسدل5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\منسدل6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                    <!--حناء-->
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناصغيرة1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناصغيرة2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناصغيرة3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناصغيرة4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناصغيرة5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناصغيرة6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناوسط1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناوسط2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناوسط3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناوسط4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناوسط5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\حناوسط6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\رسمةكبيرة1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\رسمةكبيرة2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\رسمةكبيرة3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\رسمةكبيرة4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\رسمةكبيرة5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='C:\Users\shahe\OneDrive\Desktop\makeup\image\رسمةكبيرة6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Bridesmaid</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
                 </div>
             </div>
-        </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Services Section -->
     <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16 reveal translate-y-10">
             <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Exquisite
-                Selection</span>
-            <h2 class="text-4xl md:text-5xl font-display mb-6">Services & Pricing</h2>
+                Selection <br> اختيار عالي الجودة</span>
+            <h2 class="text-4xl md:text-5xl font-display mb-6">Services & Pricing <br>الخدمات والسعر</h2>
             <p class="text-brand-muted max-w-2xl mx-auto">Premium beauty experiences curated for every milestone of your
-                journey.</p>
+                journey. <br> تجربة جمال عالٍ مصممة لجميع علامات رحلتك.</p>
         </div>
+
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Service Card 1 -->
@@ -429,7 +1477,15 @@
         </div>
     </section>
 
+
+
+
+
     <!-- Testimonials Section -->
+
+
+    <!--
+
     <section id="testimonials" class="bg-brand-pink/20 py-24 px-6 overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 reveal translate-y-10">
@@ -439,7 +1495,11 @@
             </div>
 
             <div class="relative max-w-4xl mx-auto">
-                <!-- Testimonial Items -->
+
+
+
+                
+
                 <div id="testimonial-slider" class="overflow-hidden relative h-[300px] md:h-[250px]">
                     <div
                         class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-100 translate-x-0">
@@ -485,8 +1545,8 @@
 
 
 
+              
 
-                <!-- Navigation -->
                 <div class="flex justify-center mt-12 space-x-4">
                     <button onclick="prevTestimonial()"
                         class="w-10 h-10 rounded-full border border-brand-pink-dark flex items-center justify-center text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white transition-all">
@@ -507,26 +1567,217 @@
         </div>
     </section>
 
+
+-->
+
+
+
+
+
+
+    <section id="testimonials" class="bg-brand-pink/20 py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal translate-y-10">
+                <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Kind
+                    Words</span>
+
+
+
+
+
+                <h2 class="text-4xl md:text-5xl mb-6" style="font-family: 'Parisienne', 'Amiri', cursive;">
+                    Client Experiences <br> رأي زبوناتي
+                </h2>
+
+
+
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div id="testimonial-slider" class="overflow-hidden relative h-[400px] md:h-[300px]">
+
+                    <div
+                        class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-100 translate-x-0 z-10">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"عنجد شغل رؤى
+                                بالمكياج بجنن، بشرتي طلعت صافية ولمعتها ناعمة كتير.
+                                ضل ثابت طول اليوم وكل البنات سألوني مين عاملي المكياج.."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— رغد.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"المكياج طلع زي ما
+                                بدي بالزبط وأحلى، التفاصيل كانت مرتبة كتير.
+                                رؤى فاهمة شغلها وبتعرف شو بناسب كل بنت."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ريما.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"حبيت كيف الألوان
+                                طالعة طبيعية وناعمة بدون مبالغة.
+                                اللوك كله كان راقي وخفيف بس بنفس الوقت فخم."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— تسنيم.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"المكياج كان بجنن
+                                وضل ثابت
+                                تجربة كتير حلوة وبرجع عند رؤى أكيد!"
+                            </p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ليلى.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"رؤى كتير لطيفة
+                                وبتفهم شو بدك من أول مرة.
+                                النتيجة النهائية كانت أحلى بكتير من اللي متخيليته."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— سارة.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"نقشة الحناء عند رؤى
+                                كانت دقيقة ومرتبة بطريقة بتجنن.
+                                اللون طلع غامق وثابت وضلت حلوة لأيام."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— نور.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"اختارتلي تصميم كتير
+                                حلو وناسب إيدي بشكل مرتب.
+                                كل اللي شافها ضل يسألني وين عاملايتها."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">—ريم.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"تسريحة الشعر عند
+                                رؤى كانت ثابتة طول المناسبة وما خربت أبداً.
+                                شكلها كان ناعم ومرتب وطلع علي كتير حلو."
+                            </p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ديما.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"رؤى عنجد مبدعة
+                                بالمكياج، اللوك طلع ناعم ومرتب وناسب ملامحي كتير.
+                                كل التفاصيل كانت متقنة وحسيت حالي طالعة بثقة وفخامة."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ياسمين.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"المكياج عند رؤى طلع
+                                كتير نظيف ومرتب، وما في ولا غلطة بالتفاصيل."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ماريّا.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center mt-12">
+                    <button onclick="nextTestimonial()"
+                        class="group w-14 h-14 rounded-full border border-brand-pink-dark flex items-center justify-center text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white transition-all duration-300 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
     <!-- Booking System -->
     <section id="booking" class="py-24 px-6 max-w-5xl mx-auto">
         <div
             class="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-brand-pink/30 reveal translate-y-10">
             <div class="md:w-1/3 bg-brand-pink p-12 text-brand-pink-dark flex flex-col justify-center">
-                <h2 class="text-4xl font-display mb-6">Reservation</h2>
-                <p class="font-light mb-8">Start your transformation journey today. Select your service and preferred
-                    date, and we'll handle the rest.</p>
+                <h2 class="text-4xl font-display mb-6">Reservation حجز</h2>
+                <p class="font-light mb-8">Start your transformation journey today. Select your service and
+                    preferred
+                    date, and we'll handle the rest. <br>ابدأ رحلة التغيير اليوم. اختر الخدمة والتاريخ المفضل لديك،
+                    وسنتكفل بالباقي.</p>
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3">
                         <div class="w-2 h-2 rounded-full bg-brand-pink-dark"></div>
-                        <span class="text-sm font-medium uppercase tracking-wider">Professional Lighting</span>
+                        <span class="text-sm font-medium uppercase tracking-wider">Professional Lighting <br>إضاءة
+                            احترافية</span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <div class="w-2 h-2 rounded-full bg-brand-pink-dark"></div>
-                        <span class="text-sm font-medium uppercase tracking-wider">Premium Products</span>
+                        <span class="text-sm font-medium uppercase tracking-wider">Premium Products <br>منتجات عالية
+                            الجودة</span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <div class="w-2 h-2 rounded-full bg-brand-pink-dark"></div>
-                        <span class="text-sm font-medium uppercase tracking-wider">On-Site Available</span>
+                        <span class="text-sm font-medium uppercase tracking-wider">On-Site Available <br>متوفر في الموقع
+                        </span>
                     </div>
                 </div>
                 <div class="mt-12">
@@ -542,13 +1793,13 @@
                     <div class="grid sm:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Full
-                                Name</label>
+                                Name <br>الاسم الكامل</label>
                             <input type="text" name="name" required placeholder="Your Name"
                                 class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all" />
                         </div>
                         <div>
                             <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Phone
-                                Number</label>
+                                Number <br>رقم الهاتف</label>
                             <input type="tel" name="phone" required placeholder="+1 555..."
                                 class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all" />
                         </div>
@@ -558,21 +1809,25 @@
                         <div>
                             <label
                                 class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Select
-                                Service</label>
+                                Service <br>اختر الخدمة</label>
                             <select required name="service"
                                 class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all appearance-none">
-                                <option value="">Choose a service</option>
-                                <option>Bridal Makeup</option>
-                                <option>Engagement Makeup</option>
-                                <option>Graduation Makeup</option>
-                                <option>Bridesmaid Makeup</option>
-                                <option>Soft Glam Makeup</option>
-                                <option>Evening Makeup</option>
+                                <option value="">Choose a service </option>
+                                <option>Bride-Hair-Makeup <br>عروس-مكياج-شعر</option>
+                                <option>Bride-Hair <br> عروس-مكياج</option>
+                                <option>graduation makeup <br> مكياج تخرّج</option>
+                                <option>makeup-hair-henna <br> مكياج-شعر-حناء</option>
+                                <option>makeup-hair <br> مكياج-شعر</option>
+                                <option>makeup-henna <br>مكياج-حناء</option>
+                                <option>makeup <br> مكياج</option>
+                                <option>hair <br> شعر</option>
+                                <option>henna <br> حناء</option>
                             </select>
                         </div>
                         <div>
-                            <label
-                                class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Date</label>
+
+                            <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Date
+                                <br>التاريخ</label>
                             <input type="date" name="date" required
                                 class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all" />
                         </div>
@@ -580,20 +1835,20 @@
 
                     <div class="mb-6">
                         <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Service
-                            Location</label>
+                            Location <br>اختر الموقع</label>
                         <select required name="location_type" id="locationSelect"
                             class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all appearance-none">
-                            <option value="">Choose a location</option>
-                            <option value="At Roaa Studio">At Roaa Studio</option>
-                            <option value="Home Service">Home Service</option>
+                            <option value="">Choose a location <br>اختر الموقع</option>
+                            <option value="At Roaa Studio">At Roaa Studio <br>في استوديو رؤى</option>
+                            <option value="Home Service">Home Service <br>خدمة منزلية</option>
                         </select>
                         <a id="studioLocationLink" href="https://maps.google.com/" target="_blank"
                             class="hidden text-sm text-brand-pink-dark hover:underline mt-2 inline-block">View Studio
-                            Location</a>
+                            Location <br>عرض موقع الاستوديو</a>
 
                         <div id="addressField" class="hidden mt-4">
                             <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Full
-                                Address</label>
+                                Address <br>العنوان الكامل</label>
                             <input type="text" name="address" placeholder="Enter your full address"
                                 class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all" />
                         </div>
@@ -602,19 +1857,21 @@
                     <div>
                         <label
                             class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Additional
-                            Notes (Optional)</label>
+                            Notes (Optional) <br>ملاحظات إضافية (اختياري)</label>
                         <textarea name="notes" rows="3" placeholder="Tell Roaa about your event or skin type..."
                             class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all"></textarea>
                     </div>
 
                     <button type="submit"
                         class="w-full bg-brand-pink-dark text-white font-bold py-4 rounded-lg uppercase tracking-[0.2em] text-sm btn-hover mt-4">
-                        Confirm Booking
+                        Confirm Booking <br>تأكيد الحجز
                     </button>
 
                     <div id="bookingSuccess"
                         class="hidden text-center text-green-600 font-bold animate-fade-in p-4 bg-green-50 rounded-lg">
-                        Thank you! Your booking request has been sent. Roaa will contact you shortly.
+                        Thank you! Your booking request has been sent. Roaa will contact you shortly. <br>شكرا لك! تم
+                        إرسال
+                        طلب الحجز الخاص بك. ستتواصل معك رؤى قريباً.
                     </div>
                 </form>
             </div>
@@ -640,7 +1897,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <p class="text-gray-300 font-light">Greater Metropolitan Area and Destination Services</p>
+                    <p class="text-gray-300 font-light">إربد-المجمع الشمالي</p>
                 </div>
             </div>
 
