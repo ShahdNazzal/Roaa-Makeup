@@ -1,0 +1,2137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roaa Makeup Artist | Luxury Beauty Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Amiri&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-pink': '#FCE4EC',
+                        'brand-pink-dark': '#F06292',
+                        'brand-accent': '#D4AF37', // Rose Gold/Gold touch
+                        'brand-bg': '#FFFFFF',
+                        'brand-text': '#2D2D2D',
+                        'brand-muted': '#757575',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-brand-bg text-brand-text font-sans overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-display font-bold tracking-tight text-brand-pink-dark">
+                Roaa <span class="text-brand-text font-light">Makeup</span>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+            <!-- Desktop Nav -->
+
+            <div class="hidden md:flex text-xl font-medium uppercase tracking-normal space-x-10"
+                style="font-family: 'Cairo', sans-serif;">
+                <a href="#home"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">الرئيسية</a>
+                <a href="#about"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">عن</a>
+                <a href="#gallery"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">العرض</a>
+                <a href="#services"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">الخدمات</a>
+                <a href="#testimonials"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">الآراء</a>
+                <a href="#contact"
+                    class="hover:text-brand-pink-dark hover:scale-105 transition-transform transition-colors">اتصل
+                    بنا</a>
+
+
+
+            </div>
+
+            <a href="#booking"
+                class="hidden md:block bg-brand-pink-dark text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest btn-hover">
+                Book Session <br>إحجزي الآن
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden text-brand-text" onclick="toggleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white w-full absolute top-full left-0 border-b border-brand-pink py-6 px-6 flex flex-col space-y-4 shadow-xl">
+            <a href="#home" onclick="toggleMenu()" class="text-lg">Home <br>الرئيسية</a>
+            <a href="#about" onclick="toggleMenu()" class="text-lg">About <br>عن</a>
+            <a href="#gallery" onclick="toggleMenu()" class="text-lg">Gallery <br>العرض</a>
+            <a href="#services" onclick="toggleMenu()" class="text-lg">Services <br>الخدمات</a>
+            <a href="#booking" onclick="toggleMenu()" class="text-lg">Book Now <br>حجز جلسة</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-lg">Contact <br>اتصل بنا</a>
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 scale-105">
+            <img src='image\firstimage.jpg' alt='Luxury Makeup Artist Header' class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl animate-fade-in">
+            <h1 class="text-5xl md:text-8xl font-display text-white mb-6 drop-shadow-lg">
+                Roaa Makeup Artist
+            </h1>
+            <p class="text-lg md:text-2xl text-white/90 font-light mb-10 tracking-wide uppercase">
+                Professional Makeup for Your Most Special Moments
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#booking"
+                    class="bg-brand-pink-dark text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest btn-hover shadow-2xl">
+                    Book Your Session <br>
+                    إحجزي الآن
+                </a>
+                <a href="#gallery"
+                    class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-brand-pink-dark transition-all">
+                    View My Work <br> شغلي
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 md:py-32 px-6 max-w-7xl mx-auto overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal translate-y-10 order-2 md:order-1">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-brand-pink rounded-2xl -rotate-3 transition-transform group-hover:rotate-0 duration-500">
+                    </div>
+
+
+
+                    <img src='image/roaa.jpg' alt='Roaa Portrait'
+                        class="relative rounded-2xl shadow-2xl w-full h-auto object-cover z-10" />
+                </div>
+            </div>
+            <div class="reveal translate-y-10 order-1 md:order-2">
+                <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Meet the
+                    Artist</span>
+                <h2 class="text-4xl md:text-5xl font-display mb-8 text-brand-text leading-tight"
+                    style="font-family: 'Cairo', sans-serif;">
+                    المسيرة المهنية
+                </h2>
+
+                <!--
+                <div class="space-y-6 text-brand-muted leading-relaxed text-lg font-light">
+                    <p>Roaa is a visionary makeup artist dedicated to the art of luxury beauty and sophisticated
+                        transformations. With an unwavering eye for detail and a passion for enhancing natural features,
+                        she has established herself as a premiere choice for women seeking an elevated aesthetic.</p>
+                    <p>Her philosophy centers on the belief that makeup should not only look flawless in person and on
+                        camera but should also empower the individual with a sense of timeless elegance. Roaa combines
+                        modern techniques with the highest quality products to create looks that are as enduring as they
+                        are exquisite, ensuring every client walks away feeling like the most radiant version of
+                        themselves.</p>
+                </div>
+            -->
+                <div class="space-y-6 text-brand-muted leading-relaxed text-lg font-light">
+
+                    <div dir="rtl" style="text-align: right;">
+                        <p>أنا رؤى، فنانة مكياج متخصصة في تحويل لحظاتك الخاصة إلى ذكريات خالدة. شغفي يكمن في إبراز جمالك
+                            الطبيعي وتعزيز ثقتك بنفسك من خلال لمسات فنية تجمع بين الاحترافية والرقي.</p>
+                        <br>
+                        <p>منذ أكثر من 6 سنوات، أعمل مع عرائس وسيدات يسعين للتميز في مناسباتهن، سواء كانت حفلات زفاف،
+                            خطوبة، أو سهرات خاصة. أؤمن بأن كل امرأة تستحق أن تشعر بأنها الأجمل في يومها، وهذا ما أسعى
+                            لتحقيقه في كل جلسة.</p>
+                        <br>
+
+                        <p>
+                            تحمل رؤى شهادات احترافية في فن المكياج، من بينها
+                            <a href="https://www.vtct.org.uk/qualifications/beauty-therapy-and-makeup-artistry/"
+                                target="_blank"
+                                style="color: #E91E63; text-decoration: underline; font-weight: bold; transition: color 0.3s;">
+                                <strong>VTCT Level 3 Diploma in Makeup</strong>
+                            </a>،
+                            وهي شهادة مهنية معتمدة في مجال التجميل تُؤهّل المتدربين للعمل كمحترفي مكياج
+                            في صالونات التجميل وقطاع الأزياء والتصوير والإعلام.
+                        </p>
+                        <br>
+
+                        <p>أستخدم أفضل المنتجات العالمية وأحدث التقنيات لضمان إطلالة تدوم طويلاً وتبدو مثالية في الصور
+                            والفيديو. سواء كنتِ تبحثين عن مكياج ناعم وهادئ أو إطلالة جريئة وملفتة، فأنا هنا لأحقق رؤيتكِ
+                            بأسلوب يجمع بين الفخامة والعصرية.</p>
+                        <br>
+                        <p>دعيني أكون جزءاً من يومك المميز وأساعدك على التألق بأبهى حلة. لأن جمالك يستحق الأفضل.</p>
+                        <br>
+
+                        <p>
+                            بالإضافة لذلك، تحمل رؤى
+                            <a href="https://www.accreditedtraining.org.uk/" target="_blank"
+                                style="color: #E91E63; text-decoration: underline; font-weight: bold; transition: color 0.3s;">
+                                <strong>شهادة تدريبية معتمدة</strong>
+                            </a>
+                            تؤهلها لتدريب المهتمين بعالم المكياج بشكل عملي وفعّال. قريباً، ستعلن عن <strong>كورس تدريبي
+                                متكامل</strong> يتيح للمتدربين التعلم مباشرة معها واكتساب خبرة عملية تساعدهم على تطوير
+                            مهاراتهم والوصول لمستوى احترافي.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+                <div class="mt-10 flex space-x-8">
+                    <div>
+                        <span class="block text-3xl font-display text-brand-pink-dark">6+</span>
+                        <span class="text-xs uppercase tracking-widest text-brand-muted">Years Experience <br> سنوات
+                            الخبرة</span>
+                    </div>
+                    <div>
+                        <span class="block text-3xl font-display text-brand-pink-dark">50+</span>
+                        <span class="text-xs uppercase tracking-widest text-brand-muted">Happy Brides <br> عروس
+                            سعيدة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+
+    <!--
+    <section id="gallery" class="bg-gray-50 py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal translate-y-10">
+                <h2 class="text-4xl md:text-5xl font-display mb-6">Makeup Gallery <br> الإطلالات</h2>
+                <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Portfolio
+                </span>
+                <div class="flex flex-wrap justify-center gap-2 mt-8 no-scrollbar overflow-x-auto">
+                    <button onclick="filterGallery('all')"
+                        class="gallery-tab active px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider bg-brand-pink-dark text-white font-bold transition-all">جميع
+                        الإطلالات</button>
+                    <button onclick="filterGallery('bridal')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">عروس</button>
+                    <button onclick="filterGallery('glam')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        ناعم</button>
+                    <button onclick="filterGallery('evening')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        سهرة</button>
+                    <button onclick="filterGallery('other')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        خطوبة</button>
+
+                    <button onclick="filterGallery('graduation')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        تخرج
+                    </button>
+
+
+                    <button onclick="filterGallery('henna')"
+                        class="gallery-tab w-full mt-2 px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">
+                        حناء
+                    </button>
+
+                </div>
+            </div>
+
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+            -->
+
+
+    <style>
+        /* نخفي الـ radio buttons */
+        .gallery-radio {
+            display: none;
+        }
+
+        /* شكل الأزرار العادية */
+        .gallery-tab {
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* تظليل الزر المحدد بشكل دائم بعد الضغط */
+        .gallery-radio {
+            display: none;
+        }
+
+        .gallery-tab {
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #fff;
+            color: #333;
+        }
+
+
+
+        .gallery-tab.active {
+            background-color: #d63384;
+            color: #fff;
+            border-color: #d63384;
+        }
+    </style>
+
+
+
+
+
+
+    <section id="gallery" class="bg-gray-50 py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal translate-y-10">
+                <span
+                    class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-display mb-6">Makeup Gallery <br> الإطلالات</h2>
+
+                <!-- 🔹 تصنيفات المكياج -->
+
+                <h3
+                    class="text-sm font-bold text-pink-600 py-1 my-1 text-center w-full uppercase tracking-wide bg-pink-50 rounded-md">
+                    المكياج
+                </h3>
+                <div class="flex flex-wrap justify-center gap-2 mt-1 no-scrollbar overflow-x-auto">
+
+
+
+
+                    <button onclick="filterGallery('makeup-all')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">جميع
+                        الإطلالات</button>
+
+
+
+
+
+                    <button onclick="filterGallery('bridal')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">عروس</button>
+                    <button onclick="filterGallery('glam')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">ناعم</button>
+                    <button onclick="filterGallery('evening')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">سهرة</button>
+                    <button onclick="filterGallery('engagement')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">خطوبة</button>
+                    <button onclick="filterGallery('graduation')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">تخرج</button>
+                </div>
+
+
+
+                <!-- 🔹 تصنيفات الحناء -->
+
+
+
+                <h3
+                    class="text-sm font-bold text-pink-600 py-1 my-1 text-center w-full uppercase tracking-wide bg-pink-50 rounded-md">
+                    الحنّاء
+                </h3>
+                <p>
+                    </pp>
+                <div class="flex flex-wrap justify-center gap-2 mt-1 no-scrollbar overflow-x-auto">
+
+
+                    <button onclick="filterGallery('henna-all')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">جميع
+                        الإطلالات</button>
+
+                    <button onclick="filterGallery('henna-small')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">صغيرة</button>
+                    <button onclick="filterGallery('henna-med')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">وسط</button>
+                    <button onclick="filterGallery('henna-large')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">كبيرة</button>
+
+                </div>
+
+
+
+                <!-- 🔹 تصنيفات الشعر -->
+                <h3
+                    class="text-sm font-bold text-pink-600 py-1 my-1 text-center w-full uppercase tracking-wide bg-pink-50 rounded-md">
+                    الشعر
+                </h3>
+                <div class="flex flex-wrap justify-center gap-2 mt-1 no-scrollbar overflow-x-auto">
+
+
+                    <button onclick="filterGallery('hair-all')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">جميع
+                        الإطلالات</button>
+
+                    <button onclick="filterGallery('hair-bridal')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">عروس</button>
+                    <button onclick="filterGallery('hair-down')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">منسدل</button>
+                    <button onclick="filterGallery('hair-up')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">مرفوع</button>
+                    <button onclick="filterGallery('hair-braids')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">ضفائر</button>
+
+
+                    <button onclick="filterGallery('hair-cuts')"
+                        class="gallery-tab px-6 py-2 rounded-full border border-brand-pink text-sm uppercase tracking-wider text-brand-muted hover:border-brand-pink-dark transition-all">قصات
+                        الشعر</button>
+                </div>
+
+            </div>
+
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+
+
+
+
+
+                <!-- Items are data-tagged for simple logic -->
+                <div
+                    class="gallery-item graduation makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\تخرج1.jpg' alt='Bridal Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">graduation</span>
+                        <h4 class="text-white text-xl font-display italic">Perfect Blend</h4>
+
+                    </div>
+                </div>
+                <div
+                    class="gallery-item graduation makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\تخرج2.jpg' alt='Engagement Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">graduation</span>
+                        <h4 class="text-white text-xl font-display italic">Elegant Look</h4>
+                    </div>
+                </div>
+                <div
+                    class="gallery-item graduation makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\تخرج3.jpg' alt='Soft Glam Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">graduation<span>
+                                <h4 class="text-white text-xl font-display italic">Natural Glow</h4>
+                    </div>
+                </div>
+                <div
+                    class="gallery-item graduation makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\تخرج4.jpg' alt='Evening Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">graduation</span>
+                        <h4 class="text-white text-xl font-display italic">Smooth Base</h4>
+                    </div>
+                </div>
+
+
+                <div
+                    class="gallery-item engagement makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\خطبة1.jpg' alt='Graduation Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">engagement</span>
+                        <h4 class="text-white text-xl font-display italic">Modern Romance</h4>
+                    </div>
+                </div>
+
+                <div
+                    class="gallery-item engagement makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\خطبة2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">engagement</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+
+                <div
+                    class="gallery-item engagement makeup-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\خطبة3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">engagement</span>
+                        <h4 class="text-white text-xl font-display italic">Cohesive Beauty</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\ظفائر1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-braids</span>
+                        <h4 class="text-white text-xl font-display italic">Braided Style</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\ظفائر2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-braids</span>
+                        <h4 class="text-white text-xl font-display italic">Side Braid</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\ظفائر3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-braids</span>
+                        <h4 class="text-white text-xl font-display italic">French Braid</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\ظفائر4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-braids</span>
+                        <h4 class="text-white text-xl font-display italic">Boho Braids</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\ظفائر5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-braids</span>
+                        <h4 class="text-white text-xl font-display italic">Twin Braids</h4>
+                    </div>
+
+
+                    <!--قصات شعر-->
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\قصات_شعر1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-cuts</span>
+                        <h4 class="text-white text-xl font-display italic">Fresh Cut</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\قصات_شعر2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-cuts</span>
+                        <h4 class="text-white text-xl font-display italic">Clean Trim</h4>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\قصات_شعر3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-cuts</span>
+                        <h4 class="text-white text-xl font-display italic">Layered Cut</h4>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\قصات_شعر4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-cuts</span>
+                        <h4 class="text-white text-xl font-display italic">Modern Cut</h4>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\قصات_شعر5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-cuts</span>
+                        <h4 class="text-white text-xl font-display italic">Sharp Lines</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\مرفوع1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-up</span>
+                        <h4 class="text-white text-xl font-display italic">Hair Shape</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\مرفوع2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-up</span>
+                        <h4 class="text-white text-xl font-display italic">Low Bun</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\مرفوع3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-up</span>
+                        <h4 class="text-white text-xl font-display italic">Classic Bun</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\مرفوع4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-up</span>
+                        <h4 class="text-white text-xl font-display italic">Sleek Updo</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\مرفوع5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-up</span>
+                        <h4 class="text-white text-xl font-display italic">Elegant Updo</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\شعرعروس1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-bridal</span>
+                        <h4 class="text-white text-xl font-display italic">High Bun</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\شعرعروس2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-bridal</span>
+                        <h4 class="text-white text-xl font-display italic">Royal Style</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\شعرعروس3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-bridal</span>
+                        <h4 class="text-white text-xl font-display italic">Bridal Elegance</h4>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\شعرعروس4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-bridal</span>
+                        <h4 class="text-white text-xl font-display italic">Wedding Glow</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\شعرعروس5وشعرخطبة2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-bridal</span>
+                        <h4 class="text-white text-xl font-display italic">Soft Bridal</h4>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-bridal hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\شعرعروس6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-bridal</span>
+                        <h4 class="text-white text-xl font-display italic">Elegant Bride</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-braids hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\ظفائر6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-braids</span>
+                        <h4 class="text-white text-xl font-display italic">Glam Bride</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-cuts hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\قصات_شعر6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-cuts</span>
+                        <h4 class="text-white text-xl font-display italic">Clean Trim</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-up hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\مرفوع6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-up</span>
+                        <h4 class="text-white text-xl font-display italic">Formal Style</h4>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\منسدل1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-down</span>
+                        <h4 class="text-white text-xl font-display italic">Loose Waves</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\منسدل2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-down</span>
+                        <h4 class="text-white text-xl font-display italic">Soft Curls</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\منسدل3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-down</span>
+                        <h4 class="text-white text-xl font-display italic">Natural Flow</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\منسدل4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-down</span>
+                        <h4 class="text-white text-xl font-display italic">Free Style</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\منسدل5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-down</span>
+                        <h4 class="text-white text-xl font-display italic">Flowing Hair</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item hair-down hair-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\منسدل6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">hair-down</span>
+                        <h4 class="text-white text-xl font-display italic">Relaxed Look</h4>
+                    </div>
+
+
+
+
+
+                    <!--حناء-->
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناصغيرة1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Henna Art</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناصغيرة2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Fine Design</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناصغيرة3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Hand Henna</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناصغيرة4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Delicate Pattern</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناصغيرة5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Simple Motif</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-small henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناصغيرة6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Traditional Art</h4>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناوسط1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Modern Henna</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناوسط2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Intricate Design</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناوسط3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Minimal Henna</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناوسط4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Detailed Work</h4>
+                    </div>
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناوسط5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Artistic Henna</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-med henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\حناوسط6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Clean Lines</h4>
+                    </div>
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\رسمةكبيرة1.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Bridal Henna</h4>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\رسمةكبيرة2.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Detailed Henna</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\رسمةكبيرة3.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Artistic Touch</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\رسمةكبيرة4.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Intricate Lines</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\رسمةكبيرة5.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Refined Style</h4>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div
+                    class="gallery-item henna-large henna-all reveal translate-y-10 group relative overflow-hidden rounded-xl aspect-[1/1] shadow-lg">
+                    <img src='image\رسمةكبيرة6.jpg' alt='Bridesmaid Look'
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <span class="text-white/60 text-xs uppercase tracking-widest mb-1">Henna</span>
+                        <h4 class="text-white text-xl font-display italic">Bridal Pattern</h4>
+                    </div>
+
+
+
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal translate-y-10">
+            <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Exquisite
+                Selection <br> اختيار عالي الجودة</span>
+            <h2 class="text-4xl md:text-5xl font-display mb-6">Services & Pricing <br>الخدمات والسعر</h2>
+            <p class="text-brand-muted max-w-2xl mx-auto">Premium beauty experiences curated for every milestone of your
+                journey. <br> تجربة جمال عالٍ مصممة لجميع علامات رحلتك.</p>
+        </div>
+
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card 1 -->
+            <div
+                class="reveal translate-y-10 bg-white border border-brand-pink/30 p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                <div>
+                    <div
+                        class="w-12 h-12 bg-brand-pink rounded-full flex items-center justify-center text-brand-pink-dark mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.54 1.118l-3.976-2.888a1 1 0 00-1.175 0l-3.976 2.888c-.784.57-1.838-.197-1.539-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-display mb-4">مكياج عروس زفاف</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-6"> إطلالة أحلامك بتبدأ من هون<br>
+                        .في يومك الكبير، كل تفصيلة بتهم… ومكياجك هو اللي بيحكي قصتك
+                        <br> الخدمة شاملة بالكامل:
+                        رموش تضيف عمق لنظرتك، لمسة بادي قلو لنعومة ولمعان مثالي، تثبيت عالي يدوم لساعات طويلة،
+                        وكل التفاصيل الصغيرة اللي بتكمل إطلالتك بدون ما تحتاجي تفكري فيها
+                    </p>
+                </div>
+                <div>
+                    <div class="text-3xl font-display text-brand-text mb-6">95 <span
+                            class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD</span></div>
+                    <a href="#booking"
+                        class="block w-full text-center border border-brand-pink-dark text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white py-3 rounded-lg text-sm font-bold uppercase tracking-widest transition-colors">Book
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div
+                class="reveal translate-y-10 bg-white border border-brand-pink/30 p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                <div>
+                    <div
+                        class="w-12 h-12 bg-brand-pink rounded-full flex items-center justify-center text-brand-pink-dark mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-display mb-4">مكياج عروس (خطبة/حناء)</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-6">لأنك تستحقي تكوني الأجمل بكل تفاصيلك في
+                        يومك المميز<br>نقدّم لك إطلالة ناعمة أو فخمة حسب ذوقك، مصمّمة لتبرز جمالك الطبيعي وتخليك
+                        تشعّي
+                        ثقة وأناقة
+                        <br>
+                        الخدمة شاملة:
+                        رموش تضيف عمق وجاذبية لنظرتك،
+                        ولمسة بادي قلو ناعمة تعطي بشرتك إشراقة مثالية تحت الإضاءة والتصوير
+                    </p>
+                </div>
+                <div>
+
+
+
+                    <div class="flex items-center gap-4">
+                        <div class="text-3xl font-display text-brand-text mb-6">
+                            70<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD بدون
+                                لينسز</span>
+                        </div>
+
+                        <div class="text-3xl font-display text-brand-text mb-6">
+                            75<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD مع
+                                لينسز</span>
+                        </div>
+                    </div>
+
+
+
+                    <a href="#booking"
+                        class="block w-full text-center border border-brand-pink-dark text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white py-3 rounded-lg text-sm font-bold uppercase tracking-widest transition-colors">Book
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div
+                class="reveal translate-y-10 bg-white border border-brand-pink/30 p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                <div>
+                    <div
+                        class="w-12 h-12 bg-brand-pink rounded-full flex items-center justify-center text-brand-pink-dark mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-display mb-4">مكياج التخرج</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-6">لأن لحظة تخرّجك تستاهل إطلالة مميزة تخلّدها
+                        الصور
+                        نقدّم لك مكياج ناعم وأنيق يبرز جمالك الطبيعي ويعطيك إشراقة مثالية تناسب أجواء الاحتفال والتصوير
+                        <br>
+                        اختاري اللوك اللي يناسبك:
+                        ناعم وبسيط لإطلالة راقية، أو مع إضافات تعطيك لمسة أكثر جاذبية وتميّز <br>
+
+                    </p>
+                </div>
+                <div>
+
+
+                    <div>
+
+                        <!-- أول سطر (سعرين كبار) -->
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-display text-brand-text whitespace-nowrap ">
+                                15<span class="text-sm font-sans uppercase text-brand-muted "> JOD ناعم</span>
+                            </div>
+
+                            <div class="text-3xl font-display text-brand-text whitespace-nowrap ">
+                                17<span class="text-sm font-sans uppercase text-brand-muted "> JOD مع رموش</span>
+                            </div>
+                        </div>
+
+                        <!-- السعر الثالث تحت -->
+                        <div class="text-3xl font-display text-brand-text whitespace-nowrap mb-6">
+                            22<span class="text-sm font-sans uppercase text-brand-muted"> JOD مع رموش ولينسز</span>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <a href="#booking"
+                        class="block w-full text-center border border-brand-pink-dark text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white py-3 rounded-lg text-sm font-bold uppercase tracking-widest transition-colors">Book
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div
+                class="reveal translate-y-10 bg-white border border-brand-pink/30 p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                <div>
+                    <div
+                        class="w-12 h-12 bg-brand-pink rounded-full flex items-center justify-center text-brand-pink-dark mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-display mb-4">مكياج مرافقات</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-6">لأن كل تفصيلة بتكمل جمال المناسبة، مرافقات
+                        العروس لازم يطلعوا بإطلالة أنيقة ومتناغمة
+                        نقدّم لك مكياج ناعم ومرتب يبرز جمالك بأسلوب بسيط وجذاب يناسب أجواء الفرح والتصوير
+                        <br>
+                        احجزي الآن وتألقّي بإطلالة متكاملة مع العروس
+                    </p>
+                </div>
+                <div>
+
+                    <div>
+
+                        <!-- أول سطر (سعرين كبار) -->
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-display text-brand-text whitespace-nowrap ">
+                                15<span class="text-sm font-sans uppercase text-brand-muted "> JOD ناعم</span>
+                            </div>
+
+                            <div class="text-3xl font-display text-brand-text whitespace-nowrap ">
+                                17<span class="text-sm font-sans uppercase text-brand-muted "> JOD مع رموش</span>
+                            </div>
+                        </div>
+
+                        <!-- السعر الثالث تحت -->
+                        <div class="text-3xl font-display text-brand-text whitespace-nowrap mb-6">
+                            22<span class="text-sm font-sans uppercase text-brand-muted"> JOD مع رموش ولينسز</span>
+                        </div>
+
+                    </div>
+
+                    <a href="#booking"
+                        class="block w-full text-center border border-brand-pink-dark text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white py-3 rounded-lg text-sm font-bold uppercase tracking-widest transition-colors">Book
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div
+                class="reveal translate-y-10 bg-white border border-brand-pink/30 p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                <div>
+
+
+                    <div
+                        class="w-12 h-12 bg-brand-pink rounded-full flex items-center justify-center text-brand-pink-dark mb-6 group-hover:scale-110 transition-transform">
+
+                        <img src="assets/icons/henna.svg" class="h-6 w-6" alt="Henna Icon">
+
+                    </div>
+
+
+
+                    <h3 class="text-2xl font-display mb-4">ألحنّاء
+                    </h3>
+
+
+                    <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                        استمتعي بتصاميم حناء أنيقة ومخصصة تعكس ذوقك الخاص، بلمسات فنية دقيقة وجودة عالية. تبدأ الأسعار
+                        من 2 دينار للتصاميم الصغيرة
+                        <br>
+                        <span class="text-brand-pink-dark font-semibold">
+                            مع إمكانية تعديل السعر حسب حجم التصميم وتفاصيله.
+                        </span>
+                        احجزي الآن للحصول على إطلالة مميزة تناسب مناسبتك
+                    </p>
+
+
+                </div>
+                <div>
+
+
+
+
+
+                    <div class="flex items-center gap-4">
+                        <div class="text-3xl font-display text-brand-text mb-6">
+                            2<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD صغيرة
+                            </span>
+                        </div>
+
+                        <div class="text-3xl font-display text-brand-text mb-6">
+                            5<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD وسط
+                            </span>
+                        </div>
+
+                        <div class="text-3xl font-display text-brand-text mb-6">
+                            8<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD كبيرة
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <a href="#booking"
+                        class="block w-full text-center border border-brand-pink-dark text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white py-3 rounded-lg text-sm font-bold uppercase tracking-widest transition-colors">Book
+                        Now</a>
+                </div>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div
+                class="reveal translate-y-10 bg-white border border-brand-pink/30 p-10 rounded-2xl shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+                <div>
+
+
+                    <div
+                        class="w-12 h-12 bg-brand-pink rounded-full flex items-center justify-center text-brand-pink-dark mb-6">
+
+                        <!-- SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.32 379.319" class="h-6 w-6"
+                            fill="currentColor">
+                            <g>
+                                <path d="M221.945,374.157c31.236-27.885,113.069-71.488,98.239-180.19c-3.607-38.254-11.571-58.987-19.115-85.617
+            C287.185,59.359,216.971-27.448,137.777,8.482C58.583,44.401,22.173,240.605,102.325,255.915
+            c10.749,1.564,34.827-38.383,37.519-51.45c2.691-13.066,16.179-3.059,29.24-30.267c13.055-27.214,1.279-50.445,9.996-68.188
+            c8.717-17.761,12.448-31.056,38.558-27.243c17.423,4.355,12.611,27.943,16.185,41.016c3.562,13.067,31.248,27.75,30.57,37.355
+            c-0.677,9.575-12.308,7.006-12.039,17.334c0,4.222,5.955,7.252,6.166,12.15c0.198,4.904-6.586,8.676-6.586,8.676
+            s6.025,3.784,4.426,9.284c-1.588,5.511-9.085,5.079-11.935,6.632c-1.331,0.736,10.72,19.396,2.476,29.531
+            c-10.065,11.842-60.388-0.63-70.08,3.142c-18.228,7.077-33.303,31.646-23.272,43.275c10.042,11.619,53.768,12.786,53.697,80.28
+            C207.244,381.583,213,382.132,221.945,374.157" />
+                            </g>
+                        </svg>
+
+                    </div>
+
+
+
+                    <h3 class="text-2xl font-display mb-4">الشعر</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-6">احصلي على تسريحة شعر أنيقة تناسب إطلالتك في
+                        كل مناسبة، مع تنفيذ على يد كوافيرة محترفة بخبرة سنوات طويلة تضمن لكِ نتيجة متقنة وراقية تدوم
+                        لفترة أطول. سواء كنتِ تبحثين عن لمسة ناعمة وبسيطة أو تسريحة أكثر فخامة وتميّز، نحرص على استخدام
+                        تقنيات احترافية تناسب نوع شعرك وتبرز جماله</p>
+                </div>
+                <div>
+
+
+                    <div class="flex items-center gap-4">
+                        <div class="text-3xl font-display text-brand-text mb-6">
+                            5<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD سشوار
+                            </span>
+                        </div>
+
+                        <div class="text-3xl font-display text-brand-text mb-6">
+                            10<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD ستريت
+                            </span>
+                        </div>
+
+                        <div class="text-3xl font-display text-brand-text mb-6">
+                            10<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD ويفي
+                            </span>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+                    <div>
+
+
+                        <div class="flex items-center gap-4">
+                            <div class="text-3xl font-display text-brand-text mb-6">
+                                18<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD
+                                    نص رفعة
+                                </span>
+                            </div>
+
+                            <div class="text-3xl font-display text-brand-text mb-6">
+                                25<span class="text-sm font-sans uppercase text-brand-muted tracking-widest">JOD
+                                    رفعة كاملة
+                                </span>
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <a href="#booking"
+                            class="block w-full text-center border border-brand-pink-dark text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white py-3 rounded-lg text-sm font-bold uppercase tracking-widest transition-colors">Book
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+    <!-- Testimonials Section -->
+
+
+    <!--
+
+    <section id="testimonials" class="bg-brand-pink/20 py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal translate-y-10">
+                <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Kind
+                    Words</span>
+                <h2 class="text-4xl md:text-5xl font-display mb-6">Client Experiences</h2>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+
+
+
+                
+
+                <div id="testimonial-slider" class="overflow-hidden relative h-[300px] md:h-[250px]">
+                    <div
+                        class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-100 translate-x-0">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl font-display italic text-brand-text mb-8">"The experience with
+                                Roaa was nothing short of perfection. She listened to exactly what I wanted for my
+                                wedding day and delivered a look that was more beautiful than I could have imagined. I
+                                felt like royalty."</p>
+                            <p class="text-brand-pink-dark font-bold uppercase tracking-widest text-sm">— Maya S.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl font-display italic text-brand-text mb-8">"I have never
+                                received so many compliments on my makeup. Roaa has a magic touch with skin, making it
+                                look flawless but still like skin. Her soft glam is truly the best in the city."</p>
+                            <p class="text-brand-pink-dark font-bold uppercase tracking-widest text-sm">— Elena G.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl font-display italic text-brand-text mb-8">"Roaa is a true
+                                professional who understands lighting and photography. My graduation photos looked
+                                incredible because of her expertise. The makeup stayed perfect all day despite the
+                                heat."</p>
+                            <p class="text-brand-pink-dark font-bold uppercase tracking-widest text-sm">— Sophia J.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+              
+
+                <div class="flex justify-center mt-12 space-x-4">
+                    <button onclick="prevTestimonial()"
+                        class="w-10 h-10 rounded-full border border-brand-pink-dark flex items-center justify-center text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button onclick="nextTestimonial()"
+                        class="w-10 h-10 rounded-full border border-brand-pink-dark flex items-center justify-center text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+-->
+
+
+
+
+
+
+    <section id="testimonials" class="bg-brand-pink/20 py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 reveal translate-y-10">
+                <span class="text-brand-pink-dark font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Kind
+                    Words</span>
+
+
+
+
+
+                <h2 class="text-4xl md:text-5xl mb-6" style="font-family: 'Parisienne', 'Amiri', cursive;">
+                    Client Experiences <br> رأي زبوناتي
+                </h2>
+
+
+
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div id="testimonial-slider" class="overflow-hidden relative h-[400px] md:h-[300px]">
+
+                    <div
+                        class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-100 translate-x-0 z-10">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"عنجد شغل رؤى
+                                بالمكياج بجنن، بشرتي طلعت صافية ولمعتها ناعمة كتير.
+                                ضل ثابت طول اليوم وكل البنات سألوني مين عاملي المكياج.."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— رغد.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"المكياج طلع زي ما
+                                بدي بالزبط وأحلى، التفاصيل كانت مرتبة كتير.
+                                رؤى فاهمة شغلها وبتعرف شو بناسب كل بنت."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ريما.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"حبيت كيف الألوان
+                                طالعة طبيعية وناعمة بدون مبالغة.
+                                اللوك كله كان راقي وخفيف بس بنفس الوقت فخم."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— تسنيم.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"المكياج كان بجنن
+                                وضل ثابت
+                                تجربة كتير حلوة وبرجع عند رؤى أكيد!"
+                            </p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ليلى.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"رؤى كتير لطيفة
+                                وبتفهم شو بدك من أول مرة.
+                                النتيجة النهائية كانت أحلى بكتير من اللي متخيليته."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— سارة.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"نقشة الحناء عند رؤى
+                                كانت دقيقة ومرتبة بطريقة بتجنن.
+                                اللون طلع غامق وثابت وضلت حلوة لأيام."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— نور.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"اختارتلي تصميم كتير
+                                حلو وناسب إيدي بشكل مرتب.
+                                كل اللي شافها ضل يسألني وين عاملايتها."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">—ريم.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"تسريحة الشعر عند
+                                رؤى كانت ثابتة طول المناسبة وما خربت أبداً.
+                                شكلها كان ناعم ومرتب وطلع علي كتير حلو."
+                            </p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ديما.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"رؤى عنجد مبدعة
+                                بالمكياج، اللوك طلع ناعم ومرتب وناسب ملامحي كتير.
+                                كل التفاصيل كانت متقنة وحسيت حالي طالعة بثقة وفخامة."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ياسمين.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide absolute inset-0 transition-all duration-700 opacity-0 translate-x-full"
+                        style="display:none;">
+                        <div class="text-center px-4 md:px-12">
+                            <div class="text-brand-accent text-4xl mb-6">“</div>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;">"المكياج عند رؤى طلع
+                                كتير نظيف ومرتب، وما في ولا غلطة بالتفاصيل."</p>
+                            <p class="text-xl md:text-2xl italic text-brand-text mb-8"
+                                style="font-family: 'Parisienne', 'Amiri', cursive;  color: #d63384;">— ماريّا.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center mt-12">
+                    <button onclick="nextTestimonial()"
+                        class="group w-14 h-14 rounded-full border border-brand-pink-dark flex items-center justify-center text-brand-pink-dark hover:bg-brand-pink-dark hover:text-white transition-all duration-300 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 transform group-hover:translate-x-1 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Booking System -->
+    <section id="booking" class="py-24 px-6 max-w-5xl mx-auto">
+        <div
+            class="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-brand-pink/30 reveal translate-y-10">
+            <div class="md:w-1/3 bg-brand-pink p-12 text-brand-pink-dark flex flex-col justify-center">
+                <h2 class="text-4xl font-display mb-6">Reservation حجز</h2>
+                <p class="font-light mb-8">Start your transformation journey today. Select your service and
+                    preferred
+                    date, and we'll handle the rest. <br>ابدأ رحلة التغيير اليوم. اختر الخدمة والتاريخ المفضل لديك،
+                    وسنتكفل بالباقي.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 rounded-full bg-brand-pink-dark"></div>
+                        <span class="text-sm font-medium uppercase tracking-wider">Professional Lighting <br>إضاءة
+                            احترافية</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 rounded-full bg-brand-pink-dark"></div>
+                        <span class="text-sm font-medium uppercase tracking-wider">Premium Products <br>منتجات عالية
+                            الجودة</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-2 h-2 rounded-full bg-brand-pink-dark"></div>
+                        <span class="text-sm font-medium uppercase tracking-wider">On-Site Available <br>متوفر في الموقع
+                        </span>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <button type="button" onclick="handleInstagramContact()"
+                        class="w-full bg-white text-brand-pink-dark border border-brand-pink-dark font-bold py-3 px-4 rounded-lg uppercase tracking-wider text-xs hover:bg-brand-pink-dark hover:text-white transition-all shadow-sm">
+                        For inquiries & communication
+                    </button>
+                </div>
+            </div>
+
+            <div class="md:w-2/3 p-12">
+                <form id="bookingForm" onsubmit="handleBooking(event)" class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Full
+                                Name <br>الاسم الكامل</label>
+                            <input type="text" name="name" required placeholder="Your Name"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Phone
+                                Number <br>رقم الهاتف</label>
+                            <input type="tel" name="phone" required placeholder="+1 555..."
+                                class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all" />
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label
+                                class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Select
+                                Service <br>اختر الخدمة</label>
+                            <select required name="service"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all appearance-none">
+                                <option value="">Choose a service </option>
+                                <option>Bride-Hair-Makeup <br>عروس-مكياج-شعر</option>
+                                <option>Bride-Hair <br> عروس-مكياج</option>
+                                <option>graduation makeup <br> مكياج تخرّج</option>
+                                <option>makeup-hair-henna <br> مكياج-شعر-حناء</option>
+                                <option>makeup-hair <br> مكياج-شعر</option>
+                                <option>makeup-henna <br>مكياج-حناء</option>
+                                <option>makeup <br> مكياج</option>
+                                <option>hair <br> شعر</option>
+                                <option>henna <br> حناء</option>
+                            </select>
+                        </div>
+                        <div>
+
+                            <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Date
+                                <br>التاريخ</label>
+                            <input type="date" name="date" required
+                                class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all" />
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Service
+                            Location <br>اختر الموقع</label>
+                        <select required name="location_type" id="locationSelect"
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all appearance-none">
+                            <option value="">Choose a location <br>اختر الموقع</option>
+                            <option value="At Roaa Studio">At Roaa Studio <br>في استوديو رؤى</option>
+                            <option value="Home Service">Home Service <br>خدمة منزلية</option>
+                        </select>
+                        <a id="studioLocationLink" href="https://maps.google.com/" target="_blank"
+                            class="hidden text-sm text-brand-pink-dark hover:underline mt-2 inline-block">View Studio
+                            Location <br>عرض موقع الاستوديو</a>
+
+                        <div id="addressField" class="hidden mt-4">
+                            <label class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Full
+                                Address <br>العنوان الكامل</label>
+                            <input type="text" name="address" placeholder="Enter your full address"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Additional
+                            Notes (Optional) <br>ملاحظات إضافية (اختياري)</label>
+                        <textarea name="notes" rows="3" placeholder="Tell Roaa about your event or skin type..."
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-pink focus:outline-none transition-all"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-brand-pink-dark text-white font-bold py-4 rounded-lg uppercase tracking-[0.2em] text-sm btn-hover mt-4">
+                        Confirm Booking <br>تأكيد الحجز
+                    </button>
+
+                    <div id="bookingSuccess"
+                        class="hidden text-center text-green-600 font-bold animate-fade-in p-4 bg-green-50 rounded-lg">
+                        Thank you! Your booking request has been sent. Roaa will contact you shortly. <br>شكرا لك! تم
+                        إرسال
+                        طلب الحجز الخاص بك. ستتواصل معك رؤى قريباً.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-brand-text text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="reveal translate-y-10">
+                <div class="text-3xl font-display font-bold text-brand-pink mb-6">Roaa Makeup</div>
+                <p class="text-gray-400 font-light leading-relaxed">Defining elegance through professional artistry.
+                    Available for local sessions and destination events worldwide.</p>
+            </div>
+
+            <div class="reveal translate-y-10">
+                <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-brand-pink-dark">Location</h4>
+                <div class="flex items-start space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-pink shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <p class="text-gray-300 font-light">إربد-المجمع الشمالي</p>
+                </div>
+            </div>
+
+            <div class="reveal translate-y-10">
+                <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-brand-pink-dark">Contact</h4>
+                <div class="space-y-4">
+                    <a href="tel:+962799701334" class="flex items-center space-x-4 group">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 text-brand-pink group-hover:scale-110 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <span class="text-gray-300 font-light">+962 799701334</span>
+                    </a>
+                    <a href="https://wa.me/962799701334" target="_blank" class="flex items-center space-x-4 group">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 text-brand-pink group-hover:scale-110 transition-transform" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                        <span class="text-gray-300 font-light">WhatsApp Message</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="reveal translate-y-10">
+                <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-brand-pink-dark">Follow</h4>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/roaa_artistry/" target="_blank"
+                        class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-pink-dark transition-all">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
