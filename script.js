@@ -1,4 +1,3 @@
-
 /*
 // script.js - Custom JavaScript for Roaa Makeup
 
@@ -157,7 +156,6 @@ const handleInstagramContact = () => {
 if (slides.length > 0) showSlide(0);
 // Auto rotate testimonials
 if (slides.length > 0) setInterval(nextTestimonial, 6000);
-
 
 
 
@@ -358,12 +356,29 @@ const handleInstagramContact = () => {
     }
 };
 
+// دالة إيقاظ قاعدة البيانات
+async function warmUpDatabase() {
+    try {
+        await supabaseClient
+            .from('bookings')
+            .select('id')
+            .limit(1);
+        console.log('✅ قاعدة البيانات مستيقظة');
+    } catch (error) {
+        console.log('⏳ جاري إيقاظ قاعدة البيانات...');
+    }
+}
+
 // --- Event Listeners ---
 
 window.addEventListener('scroll', revealElements);
 window.addEventListener('load', revealElements);
 
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // إيقاظ قاعدة البيانات فور فتح الموقع
+    warmUpDatabase();
+
     // 1. Location Logic Setup
     const locationSelect = document.getElementById('locationSelect');
     const studioLink = document.getElementById('studioLocationLink');
