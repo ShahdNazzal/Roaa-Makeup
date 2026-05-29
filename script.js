@@ -301,49 +301,69 @@ function nextTestimonial() {
 }
 
 // Form Handling
+// Form Handling مع نظام إعادة المحاولة التلقائية لإيقاظ الداتابيز
 const handleBooking = async (e) => {
     e.preventDefault();
     const btn = e.target.querySelector('button[type="submit"]');
     const success = document.getElementById('bookingSuccess');
 
-    btn.innerHTML = 'Sending...';
     btn.disabled = true;
     btn.style.opacity = '0.5';
+    btn.innerHTML = 'جاري الإرسال... (إذا كانت قاعدة البيانات نائمة سينتظر قليلاً)';
 
-    try {
-        const formData = new FormData(e.target);
-        const data = {
-            name: formData.get('name'),
-            phone: formData.get('phone'),
-            service: formData.get('service'),
-            booking_date: formData.get('date'),
-            notes: formData.get('notes') || null,
-            location_type: formData.get('location_type'),
-            address: formData.get('address') || null
-        };
+    const formData = new FormData(e.target);
+    const data = {
+        name: formData.get('name'),
+        phone: formData.get('phone'),
+        service: formData.get('service'),
+        booking_date: formData.get('date'),
+        notes: formData.get('notes') || null,
+        location_type: formData.get('location_type'),
+        address: formData.get('address') || null
+    };
 
-        const { error } = await supabaseClient
-            .from('bookings')
-            .insert([data]);
+    let maxRetries = 3; // عدد المرات اللي رح يحاول فيها
 
-        if (error) throw error;
+    for (let i = 0; i < maxRetries; i++) {
+        try {
+            const { error } = await supabaseClient
+                .from('bookings')
+                .insert([data]);
 
-        btn.classList.add('hidden');
-        success.classList.remove('hidden');
-        e.target.reset();
+            if (error) throw error;
 
-        document.getElementById('studioLocationLink').classList.add('hidden');
-        document.getElementById('addressField').classList.add('hidden');
-        document.querySelector('input[name="address"]').removeAttribute('required');
+            // إذا نجح الحجز:
+            btn.classList.add('hidden');
+            success.classList.remove('hidden');
+            e.target.reset();
 
-    } catch (error) {
-        console.error('Booking Error:', error);
-        btn.innerHTML = 'Error! Try Again';
-        btn.disabled = false;
-        btn.style.opacity = '1';
-        alert("Something went wrong. Please try again or contact us on Instagram.");
+            document.getElementById('studioLocationLink').classList.add('hidden');
+            document.getElementById('addressField').classList.add('hidden');
+            document.querySelector('input[name="address"]').removeAttribute('required');
+            
+            return; // يوقف الكود لأنه نجح
+
+        } catch (error) {
+            console.error(`محاولة ${i + 1} فشلت:`, error.message);
+            
+            // إذا كانت هذه آخر محاولة
+            if (i === maxRetries - 1) {
+                console.error('فشل الحجز نهائياً:', error);
+                btn.innerHTML = 'حدث خطأ! حاول مرة أخرى';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                alert("حدث خطأ في الإرسال بعد عدة محاولات. يرجى المحاولة مرة أخرى أو التواصل عبر الإنستغرام.");
+            } else {
+                // إذا فشلت، غير نص الزر وانتظر 5 ثواني ثم حاول مرة ثانية
+                btn.innerHTML = `قاعدة البيانات تستيقظ... جاري المحاولة (${i + 2}/${maxRetries})`;
+                await new Promise(resolve => setTimeout(resolve, 5000)); // انتظر 5 ثواني
+            }
+        }
     }
 };
+
+
+
 
 const handleInstagramContact = () => {
     const dmLink = "https://www.instagram.com/direct/t/108222313905572/";
